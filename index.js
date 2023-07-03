@@ -12,9 +12,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use("/api/v1", router);
 
-app.get("/ping", (req,res)=>{
-    return res.send("pong");
-})
+// app.get("/ping", (req,res)=>{
+//     return res.send("pong");
+// })
 
 mongoose.connect(process.env.MONGODB_URL)   
 .then(() => console.log("DB connected"))
